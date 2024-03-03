@@ -346,6 +346,19 @@ body{
     top: 25px;
     right: 25px;
 }
+.icon-music{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+    rotate: 0deg;
+    transition: rotate 0.2s linear ;
+}
+.icon-music:hover{
+    color: #FFD700;
+    rotate: 360deg;
+    z-index: 999;
+}
 
 @media (max-width: 768px) {
     .selector{
