@@ -388,7 +388,6 @@ a:hover{
         align-items: center;
         width: 100%;
     }
-    
 
     .text-project-sub{
         width: 100%;
@@ -405,3 +404,15 @@ a:hover{
         cursor: pointer;
     }
 }
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .container > div{
+        overflow: auto;
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+        height: 100%;
+    }
+    .container > div::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari and Opera */
+    }
+}
+
