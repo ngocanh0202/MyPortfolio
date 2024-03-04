@@ -22,6 +22,40 @@ a:hover{
     opacity: 0;
     animation: display-none 0.3s ease-in-out forwards;
 }
+.message{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #171717;
+    z-index: 999;
+}
+.message-display{
+    animation: bottom-to-top 0.5s ease-in-out forwards;
+}
+.message-hidden{
+    animation: top-to-bottom 0.5s ease-in-out forwards;
+}
+@keyframes bottom-to-top{
+    from{
+        opacity: 0; 
+        transform: translate(-50%, 100%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }   
+}
+@keyframes top-to-bottom{
+    from{
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    to{
+        opacity: 0;
+        transform: translate(-50%, 100%);
+    }
+}
 
 @keyframes display-container{
     from{
@@ -145,7 +179,7 @@ a:hover{
     flex-direction: column;
     gap: 32px;
     width: 65%;
-} 
+}
 
 
 /* home */

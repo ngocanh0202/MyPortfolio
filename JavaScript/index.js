@@ -2,6 +2,7 @@ import {projectContents,detailProject,removeProjectClicked} from './data_project
 import adjustSelectorwindowSize from './button_media.js';
 import {button_events, display_home} from './buttons.js';
 import musicController from './musicController.js';
+import copyToClipboard from './copy_to_clipboard.js';
 
 const home = document.querySelector(".home");
 const selector = document.querySelector(".selector ul .selected");
@@ -17,4 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
     removeProjectClicked();
     adjustSelectorwindowSize();
     musicController();
+    copyToClipboard();
 });
