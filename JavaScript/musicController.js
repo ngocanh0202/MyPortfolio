@@ -1,16 +1,38 @@
- function musicController () {
-    const container_music = document.querySelector(".icon-music");
-    const icon_music = document.querySelector(".icon-music img");
-    
-    const audio = document.createElement("audio");
-    audio.autoplay = true;
-    audio.loop = true;
+const sources = [
+    { src: "musics/Fieren.mp3"},
+    { src: "musics/Fruits_Basket.mp3"},
+    { src: "musics/Gintama.mp3"}
+];
+const container_music = document.querySelector(".icon-music");
+const icon_music = document.querySelector(".icon-music img");
+const audio = document.createElement("audio");
+audio.autoplay = true;
+let currentSourceIndex = 0;
 
+function setSource(index) {
     const source = document.createElement("source");
-    source.src = "musics/Fieren.mp3";
-    source.type = "audio/mpeg";
-    audio.appendChild(source);
+    source.src = sources[index].src;
 
+
+    while (audio.firstChild) {
+        audio.removeChild(audio.firstChild);
+    }
+    audio.appendChild(source);
+    audio.load();
+}
+setSource(currentSourceIndex);
+
+function musicController() {
+  
+    audio.addEventListener('ended', function () {
+        currentSourceIndex++;
+        if (currentSourceIndex >= sources.length) {
+            currentSourceIndex = 0; 
+        }
+        setSource(currentSourceIndex);
+    });
+
+   
 
     container_music.addEventListener("click", () => {
         if (icon_music.src.endsWith("Icon_checked.png")) {
@@ -20,7 +42,13 @@
             audio.pause();
             icon_music.src = "Icons/Icon_checked.png";
         }
-    });   
+    });
 }
 
 export default musicController;
+
+
+
+
+
+
