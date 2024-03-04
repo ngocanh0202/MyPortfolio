@@ -422,7 +422,7 @@ a:hover{
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .selector{
         right: 0px;
         height: 100%;
@@ -432,8 +432,6 @@ a:hover{
         justify-content: right;
         align-items: center;
         width: 100%;
-        /* font size fit with screen now */
-        font-size: 20px;
     }
 
     .text-project-sub{
@@ -451,7 +449,7 @@ a:hover{
         cursor: pointer;
     }
 }
-@media screen and (max-width: 800px) and (orientation: landscape) {
+@media screen and (max-width: 768px) and (orientation: landscape) {
     .container > div{
         overflow: auto;
         scrollbar-width: none; /* For Firefox */
@@ -462,7 +460,7 @@ a:hover{
         display: none; /* For Chrome, Safari and Opera */
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) and (orientation: landscape), screen and (max-width: 300px){
     .media-small{
         display: block;
         position: fixed;
@@ -483,3 +481,5 @@ a:hover{
     }
     
 }
+
+
