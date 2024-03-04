@@ -1,6 +1,6 @@
 var tasks = []
 
-function displaySingleWords(str, link, className) {
+function displaySingleWords(str, link, className,timer) {
     var res = str.split("").map(element => {
         return `<span class=${className}>${element}</span>`;
     });
@@ -13,7 +13,7 @@ function displaySingleWords(str, link, className) {
                 if (index === res.length - 1) {
                     resolve();
                 }
-            }, index * 75));
+            }, index * timer));
         });
     });
 }

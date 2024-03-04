@@ -25,18 +25,18 @@ function display_home(contents_display) {
   var link_contact = ".container .display .title #contact";
 
   if (contents_display.classList.contains("display") && contents_display.classList.contains("home")) {
-    displaySingleWords(str_home, link_home, className).then(() => {
-      displaySingleWords(str2_home, link2_home, className);
+    displaySingleWords(str_home, link_home, className,75).then(() => {
+      displaySingleWords(str2_home, link2_home, className,75);
     })
   }
   else if (contents_display.classList.contains("display") && contents_display.classList.contains("about")) {
-    displaySingleWords(str_about, link_about, className);
+    displaySingleWords(str_about, link_about, className,200);
   }
   else if (contents_display.classList.contains("display") && contents_display.classList.contains("contact")) {
-    displaySingleWords(str_contact, link_contact, className);
+    displaySingleWords(str_contact, link_contact, className,200);
   }
   else if (contents_display.classList.contains("display") && contents_display.classList.contains("projects")) {
-    displaySingleWords(str_project, link_project, className);
+    displaySingleWords(str_project, link_project, className,200);
   }
 }
 
