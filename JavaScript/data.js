@@ -25,7 +25,7 @@ const projects = [
             "Team size: 1",
             "Tools: GitHub, visual studio code.",
             "Technology: JavaScript, ReactJS, NodeJS, ExpressJS, fluent-ffmpeg, ytdl-core, Cloudinary, Youtube Data API v3.",
-            "GitHub: https://github.com/ngocanh0202/youtube_video_cutting_app.git."
+            "GitHub: https://github.com/ngocanh0202/youtube_video_cutting_app.git"
         ],
 
         "image" : [
@@ -41,7 +41,7 @@ const projects = [
             "Tools: GitHub, Visual Studio 2022.",
             "Server & Database: SQL Server",
             "Technology: C#, ASP.NET Framework, HTML, CSS, JavaScript.",
-            "GitHub: https://github.com/ngocanh0202/OnlineDiskStore.git."
+            "GitHub: https://github.com/ngocanh0202/OnlineDiskStore.git"
         ],
         "image" : [
             "images/3.png"
@@ -55,8 +55,8 @@ const projects = [
             "Team size: 1",
             "Tools: GitHub, Unity.",
             "Technology: C#",
-            "GitHub: https://github.com/ngocanh0202/Ball.git.",
-            "Unity play: https://play.unity.com/mg/other/webgl-builds-384095."
+            "GitHub: https://github.com/ngocanh0202/Ball.git",
+            "Unity play: https://play.unity.com/mg/other/webgl-builds-384095"
         ],
         "image" : [
             "images/4.png"
@@ -71,7 +71,7 @@ const projects = [
             "Tools: GitHub, Visual studio code.",
             "Database: SQLite",
             "Technology: Python, Flask.",
-            "GitHub: https://github.com/ngocanh0202/Job_management_python_Flask.git."
+            "GitHub: https://github.com/ngocanh0202/Job_management_python_Flask.git"
         ],
         "image" : [
             "images/5.png"
