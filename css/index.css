@@ -3,6 +3,12 @@ body{
     background-color: #171717;
     font-family: "Pixelify Sans", sans-serif;
 }
+a{
+    color: #FFF;
+}
+a:hover{
+    color:#FFD700;
+}
 .display{
     animation: display-container 0.3s ease-in-out forwards;
 }
@@ -359,6 +365,17 @@ body{
     rotate: 360deg;
     z-index: 999;
 }
+
+
+.text-animation {
+    transition: color 0.2s linear, font-size  0.2s linear;
+}
+
+.text-animation:hover {
+    color: #FFD700;
+    font-size: larger;
+}
+
 
 @media (max-width: 768px) {
     .selector{

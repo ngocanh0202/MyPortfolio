@@ -12,9 +12,6 @@
 <body>
     <div class="icon-music">
         <image src="Icons/Icon.png" width="40" height="40" alt="music">
-        <audio  autoplay loop>
-            <source src="musics/Fieren.mp3">
-        </audio>
     </div>
     <div class="icon-selector">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -34,9 +31,9 @@
             <div class="title">
                 <div class="text-sub">&lt;h1&gt;</div>
                 <div class="text-main">
-                    Hi, I'm Bui Huynh Ngoc Anh 
+                    <span id="instructor"></span>
                     <br>
-                    Software Developer
+                    <span id="as"></span> 
                 </div>
                 <div class="text-sub">&lt;h1/&gt;</div>
             </div>
@@ -65,7 +62,7 @@
                         </svg>    
                     </div>
                     <div class="icon-information">
-                        https://github.com/ngocanh0202
+                        <a href="https://github.com/ngocanh0202">Link here</a>
                     </div>
                 </div>
                 <div class="icon-general">
@@ -100,8 +97,7 @@
         <div class="about hidden">
             <div class="title">
                 <div class="text-sub">&lt;h1&gt;</div>
-                <div class="text-main">
-                    About Me
+                <div id="about" class="text-main">
                 </div>
                 <div class="text-sub">&lt;h1/&gt;</div>
             </div>
@@ -116,8 +112,7 @@
         <div class="projects hidden">
             <div class="title">
                 <div class="text-sub">&lt;h1&gt;</div>
-                <div class="text-main">
-                    Projects
+                <div id="projects" class="text-main">
                 </div>
                 <div class="text-sub">&lt;h1/&gt;</div>
             </div>
@@ -157,8 +152,7 @@
             <div class="content">
                 <div class="title">
                     <div class="text-sub">&lt;h1&gt;</div>
-                    <div class="text-main">
-                        Contact me
+                    <div id="contact" class="text-main">
                     </div>
                     <div class="text-sub">&lt;h1/&gt;</div>
                 </div>
@@ -176,9 +170,8 @@
         </div>
     </div>
     <script type="module" src="JavaScript/index.js"></script>
-    <script src="JavaScript/buttons.js"></script>
-    <script src="JavaScript/button_media.js"></script>
-    <script src="JavaScript/musicController.js"></script>
+ 
+    
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script>
         (function(){

@@ -1,8 +1,6 @@
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
+function adjustSelectorwindowSize () {
     const selector = document.querySelector(".selector");
+    const button_icon = document.querySelector(".icon-selector");
 
     const adjustSelector = () => {
         if (window.innerWidth < 768) {
@@ -28,4 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             selector.classList.add("selector-hidden");
         }
     });
-});
+}
+
+
+export default adjustSelectorwindowSize;
