@@ -1,7 +1,7 @@
 const contents = document.querySelectorAll(".container > div");
 const buttons = document.querySelectorAll(".selector > ul li");
 
-import displaySingleWords from "./displaySingleWords.js";
+import {displaySingleWords,tasks} from "./displaySingleWords.js";
 
 
 
@@ -49,18 +49,16 @@ function button_events() {
         if (content.classList.contains("display")) {
           content.classList.remove("display");
           content.classList.add("hidden");
-
-          // clean all tasks from web APIs
-          let tasks = [];
-          tasks = tasks.concat(setTimeout);
-          tasks = tasks.concat(clearTimeout);
-
-          // remove all text-animation
-          let text_animation = document.querySelectorAll(`.text-animation`);
-          text_animation.forEach((element) => {
-            element.remove();
-          });
         }
+      });
+      tasks.forEach((task) => {
+        clearTimeout(task);
+      });
+
+      // remove all text-animation
+      let text_animation = document.querySelectorAll(`.text-animation`);
+      text_animation.forEach((element) => {
+        element.remove();
       });
       // disable click of html tags
       buttons.forEach((button) => {

@@ -1,3 +1,5 @@
+var tasks = []
+
 function displaySingleWords(str, link, className) {
     var res = str.split("").map(element => {
         return `<span class=${className}>${element}</span>`;
@@ -6,14 +8,14 @@ function displaySingleWords(str, link, className) {
     if(domElement == null) return;
     return new Promise((resolve) => {
         res.forEach((element, index) => {
-            setTimeout(() => {
+            tasks.push(setTimeout(() => {
                 domElement.innerHTML += element;
                 if (index === res.length - 1) {
                     resolve();
                 }
-            }, index * 75);
+            }, index * 75));
         });
     });
 }
 
-export default displaySingleWords;
+export {displaySingleWords, tasks};
