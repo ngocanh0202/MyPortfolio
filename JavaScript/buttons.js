@@ -1,42 +1,58 @@
 const contents = document.querySelectorAll(".container > div");
 const buttons = document.querySelectorAll(".selector > ul li");
+import { displaySingleWords, tasks } from "./displaySingleWords.js";
 
-import {displaySingleWords,tasks} from "./displaySingleWords.js";
+
+const data_single_words = {
+  "home": {
+    "str_home": "Hi, I'm Bui Huynh Ngoc Anh",
+    "str2_home": "I'm a Software Developer",
+    "link_home": ".container .display .title #instructor",
+    "link2_home": ".container .display .title #as"
+  },
+  "about": {
+    "str_about": "About Me",
+    "link_about": ".container .display .title #about"
+  },
+  "projects": {
+    "str_project": "Projects",
+    "link_project": ".container .display .title #projects"
+  },
+  "contact": {
+    "str_contact": "Contact me",
+    "link_contact": ".container .display .title #contact"
+  }
+}
+var className = "text-animation";
+
 
 
 
 
 function display_home(contents_display) {
-  var className = "text-animation";
-
-  var str_home = "Hi, I'm Bui Huynh Ngoc Anh";
-  var link_home = ".container .display .title #instructor";
-
-  var str2_home = "I'm a Software Developer";
-  var link2_home = ".container .display .title #as";
-
-  var str_about = "About Me";
-  var link_about = ".container .display .title #about";
-
-  var str_project = "Projects";
-  var link_project = ".container .display .title #projects";
-
-  var str_contact = "Contact me";
-  var link_contact = ".container .display .title #contact";
 
   if (contents_display.classList.contains("display") && contents_display.classList.contains("home")) {
-    displaySingleWords(str_home, link_home, className,75).then(() => {
-      displaySingleWords(str2_home, link2_home, className,75);
-    })
+    displaySingleWords(data_single_words.home.str_home,
+      data_single_words.home.link_home, className, 75).then(() => {
+        displaySingleWords(data_single_words.home.str2_home,
+          data_single_words.home.link2_home,
+          className, 75);
+      })
   }
   else if (contents_display.classList.contains("display") && contents_display.classList.contains("about")) {
-    displaySingleWords(str_about, link_about, className,200);
+    displaySingleWords(data_single_words.about.str_about,
+      data_single_words.about.link_about,
+      className, 200);
   }
   else if (contents_display.classList.contains("display") && contents_display.classList.contains("contact")) {
-    displaySingleWords(str_contact, link_contact, className,200);
+    displaySingleWords(data_single_words.contact.str_contact,
+      data_single_words.contact.link_contact,
+      className, 200);
   }
   else if (contents_display.classList.contains("display") && contents_display.classList.contains("projects")) {
-    displaySingleWords(str_project, link_project, className,200);
+    displaySingleWords(data_single_words.projects.str_project,
+      data_single_words.projects.link_project,
+      className, 200);
   }
 }
 
@@ -65,7 +81,7 @@ function button_events() {
         button.style.pointerEvents = "auto";
       });
       button.style.pointerEvents = "none";
-      
+
 
       // set display to the selected content
       contents[index].classList.remove("hidden");
