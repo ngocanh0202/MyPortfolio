@@ -25,6 +25,9 @@ function detailProject(){
                 if(description.startsWith("GitHub: ")){
                     li_descriptions += `<li><a href="${description.slice(8)}" target="_blank">GitHub</a></li>`;
                 }
+                else if(description.startsWith("Unity play: ")){
+                    li_descriptions += `<li><a href="${description.slice(11)}" target="_blank">Unity play</a></li>`;
+                }
                 else{
                     li_descriptions += `<li>${description}</li>`;
                 }
