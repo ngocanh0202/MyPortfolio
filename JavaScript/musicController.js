@@ -1,7 +1,7 @@
 const sources = [
-    { src: "musics/Fieren.mp3"},
-    { src: "musics/Fruits_Basket.mp3"},
-    { src: "musics/Gintama.mp3"}
+    { src: "musics/1.mp3"},
+    { src: "musics/2.mp3"},
+    { src: "musics/3.mp3"}
 ];
 const container_music = document.querySelector(".icon-music");
 const icon_music = document.querySelector(".icon-music img");
