@@ -259,9 +259,12 @@ a:hover{
     position: relative;
     width: 327px;
     height: 181px;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
-    border: 20px solid black;
+    border-top: 20px solid black;
+    border-bottom: 20px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
     box-sizing: border-box;
 }
 .container .projects .project-contents .project img{
