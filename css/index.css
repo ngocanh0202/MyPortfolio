@@ -122,7 +122,7 @@ a:hover{
     right: 40px;
     transform: translate(0, -50%);
     font-size: 24px;
-    z-index: 999px; 
+    z-index: 999; 
 }
 .selector-display{
     animation: right-to-left-2 0.5s ease-in-out forwards;
