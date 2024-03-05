@@ -351,6 +351,7 @@ a:hover{
     background-color: #c31d1d;
     border-radius: 20px;
     cursor: pointer;
+    width: auto;
 }
 .project-images .project-image img{
     border-radius: 20px;

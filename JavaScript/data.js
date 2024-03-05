@@ -13,8 +13,18 @@ const projects = [
             "GitHub: https://github.com/Prox404/Capstone1_Group15_BVT"
         ],
         "image" : [
-            "images/1.png",
-            "images/2.png",
+            "images/BVT/1.jpg",
+            "images/BVT/2.jpg",
+            "images/BVT/3.jpg",
+            "images/BVT/4.jpg",
+            "images/BVT/5.jpg",
+            "images/BVT/6.jpg",
+            "images/BVT/7.jpg",
+            "images/BVT/8.jpg",
+            "images/BVT/9.jpg",
+            "images/BVT/10.jpg",
+            "images/BVT/11.jpg",
+            "images/BVT/12.jpg",
         ]
     },
     {
@@ -29,7 +39,11 @@ const projects = [
         ],
 
         "image" : [
-            "images/2.png"
+            "images/CUTAPP/1.png",
+            "images/CUTAPP/2.png",
+            "images/CUTAPP/3.png",
+            "images/CUTAPP/4.png",
+            "images/CUTAPP/5.png",
         ]
     },
     {
@@ -44,7 +58,18 @@ const projects = [
             "GitHub: https://github.com/ngocanh0202/OnlineDiskStore.git"
         ],
         "image" : [
-            "images/3.png"
+            "images/ODS/1.png",
+            "images/ODS/2.png",
+            "images/ODS/3.png",
+            "images/ODS/4.png",
+            "images/ODS/5.png",
+            "images/ODS/6.png",
+            "images/ODS/7.png",
+            "images/ODS/8.png",
+            "images/ODS/9.png",
+            "images/ODS/10.png",
+            "images/ODS/11.png",
+            "images/ODS/12.png",
         ]
     },
     {
@@ -59,7 +84,8 @@ const projects = [
             "Unity play: https://play.unity.com/mg/other/webgl-builds-384095"
         ],
         "image" : [
-            "images/4.png"
+            "images/BALL/1.png",
+            "images/BALL/2.png",
         ]
     },
     {
@@ -74,7 +100,16 @@ const projects = [
             "GitHub: https://github.com/ngocanh0202/Job_management_python_Flask.git"
         ],
         "image" : [
-            "images/5.png"
+            "images/JM/1.png",
+            "images/JM/2.png",
+            "images/JM/3.png",
+            "images/JM/4.png",
+            "images/JM/5.png",
+            "images/JM/6.png",
+            "images/JM/7.png",
+            "images/JM/8.png",
+            "images/JM/9.png",
+            "images/JM/10.png",
         ]
     }
 ]
