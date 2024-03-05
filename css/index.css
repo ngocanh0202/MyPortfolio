@@ -35,7 +35,6 @@ a:hover{
     animation: display-container 0.3s ease-in-out forwards;
 }
 .hidden{
-    opacity: 0;
     animation: display-none 0.3s ease-in-out forwards;
 }
 .message{
@@ -54,6 +53,7 @@ a:hover{
 .message-hidden{
     animation: top-to-bottom 0.5s ease-in-out forwards;
 }
+
 @keyframes bottom-to-top{
     from{
         opacity: 0; 
@@ -89,10 +89,11 @@ a:hover{
 @keyframes display-none{
     from{
         opacity: 1;
+        transform: translate(0, 0);
     }
     to{
         opacity: 0;
-        transform: translate(0, 99999px);
+        transform: translate(0, 100%);
     }
 }
 .title{
@@ -258,17 +259,20 @@ a:hover{
     position: relative;
     width: 327px;
     height: 181px;
-    background-color: #c31d1d;
     border-radius: 20px;
     cursor: pointer;
+    border: 20px solid black;
+    box-sizing: border-box;
 }
 .container .projects .project-contents .project img{
-    border-radius: 20px;
+    object-fit: contain;
 }
 .container .projects .project-contents .project .project-title{
     position: absolute;
-    top:10px;
-    left: 10px;
+    bottom: -20px;
+    left: 0px;
+    color: #898989;
+    font-size: 17px;
 }
 .project-clicked{
     position: fixed;
@@ -284,6 +288,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 9999;
 }
 
 @keyframes right-to-left{
@@ -424,7 +429,18 @@ a:hover{
     rotate: 360deg;
     z-index: 999;
 }
-
+.content-image{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: black;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+.content-image img{
+    object-fit: contain;
+}
 
 .text-animation {
     transition: color 0.2s linear, font-size  0.2s linear;
@@ -469,9 +485,11 @@ a:hover{
 @media screen and (max-width: 768px) and (orientation: landscape) {
     .container > div{
         overflow: auto;
-        scrollbar-width: none; /* For Firefox */
-        -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
         height: 100%;
+        display: flex;
+        justify-content: center;
     }
     .container > div::-webkit-scrollbar {
         display: none; /* For Chrome, Safari and Opera */
@@ -487,14 +505,11 @@ a:hover{
         left: 0px;
         font-size: 13px;
         background-color: black;
-        z-index: 9999px;
+        z-index: 9999;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-    }
-    .icon-selector{
-        display: none;
     }
     
 }

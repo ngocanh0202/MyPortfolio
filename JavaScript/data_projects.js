@@ -1,4 +1,5 @@
 import datas from "./data.js";
+import handleImageChange from "./displayImage.js";
 
 function projectContents(){
     const project_container = document.querySelector(".project-contents");
@@ -58,6 +59,7 @@ function detailProject(){
                 </div>
             `;
             document.body.appendChild(projectClicked);
+            handleImageChange();
         });
     });
 }
