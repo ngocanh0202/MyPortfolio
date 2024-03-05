@@ -469,6 +469,9 @@ a:hover{
         align-items: center;
         width: 100%;
     }
+    .container > div{
+        width: 90%;
+    }
 
     .text-project-sub{
         width: 100%;
@@ -493,12 +496,13 @@ a:hover{
         height: 100%;
         display: flex;
         justify-content: center;
+        width: 90%;
     }
     .container > div::-webkit-scrollbar {
         display: none; /* For Chrome, Safari and Opera */
     }
 }
-@media screen and (max-width: 400px) and (orientation: landscape), screen and (max-width: 300px){
+@media screen and (max-width: 400px) and (orientation: landscape), screen and (max-width: 279px){
     .media-small{
         display: block;
         position: fixed;
