@@ -18,16 +18,18 @@ const handleImageChange = () => {
 }
 
 const removeImage = () => {
-    const contentImage = document.querySelector('.content-image');
+    const contentImage = document.querySelectorAll('.content-image');
     if(contentImage === null) return;
-    contentImage.addEventListener('click', () => {
-        setTimeout(() => {
-            contentImage.classList.remove('display');
-            contentImage.classList.add('hidden');
-        }, 10); // slight delay before starting the animation
-        setTimeout(() => {
-            contentImage.remove();
-        },300);
+    contentImage.forEach((contentImage) => {
+        contentImage.addEventListener('click', () => {
+            setTimeout(() => {
+                contentImage.classList.remove('display');
+                contentImage.classList.add('hidden');
+            }, 10);
+            setTimeout(() => {
+                contentImage.remove();
+            },300);
+        });
     });
 }
 
