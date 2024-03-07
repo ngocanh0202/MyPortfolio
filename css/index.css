@@ -320,6 +320,7 @@ a:hover{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
 }
 .text-project-sub{
     font-size: 16px;
