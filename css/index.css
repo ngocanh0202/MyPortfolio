@@ -376,7 +376,7 @@ a:hover{
     gap:12px
 }
 .container .contact .form-mail input{
-    width: 100%;
+    width: auto;
     height  : 55px;
     border-radius: 10px;
     background: #cbd1c7;
@@ -385,7 +385,7 @@ a:hover{
     font-size: 25px;
 }
 .container .contact .form-mail textarea{
-    width: 100%;
+    width: auto;
     height  : 155px;
     border-radius: 10px;
     background: #cbd1c7;
@@ -470,9 +470,21 @@ a:hover{
         width: 100%;
     }
     .container > div{
-        width: 80%;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        height: 100%;
+        justify-content: center;
+        width: 70%;
     }
-
+    .container > div::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari and Opera */
+    }
+    .container .contact{
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
     .text-project-sub{
         width: 100%;
     }
@@ -486,20 +498,6 @@ a:hover{
         display: block;
         z-index: 999;
         cursor: pointer;
-    }
-}
-@media screen and (max-width: 768px) and (orientation: landscape) {
-    .container > div{
-        overflow: auto;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        width: 70%;
-    }
-    .container > div::-webkit-scrollbar {
-        display: none; /* For Chrome, Safari and Opera */
     }
 }
 @media screen and (max-width: 400px) and (orientation: landscape), screen and (max-width: 279px){
