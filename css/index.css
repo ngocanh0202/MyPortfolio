@@ -458,7 +458,7 @@ a:hover{
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
     .selector{
         right: 0px;
         height: 100%;

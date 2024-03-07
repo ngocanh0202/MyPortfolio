@@ -3,7 +3,7 @@ function adjustSelectorwindowSize () {
     const button_icon = document.querySelector(".icon-selector");
 
     const adjustSelector = () => {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth <= 1040) {
             selector.classList.remove("selector-display");
             selector.classList.add("selector-hidden");
         } else {
