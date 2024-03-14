@@ -3,7 +3,8 @@ const icons_information = [
     "buihuynhngocanh2020@gmail.com",
     "https://github.com/ngocanh0202",
     "0888458039",
-    "Da Nang"
+    "Da Nang",
+    "https://www.linkedin.com/in/anh-bui-286815285/"
 ]
 
 function copyToClipboard() {
