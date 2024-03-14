@@ -1,7 +1,11 @@
+:root{
+    --font-text: "Pixelify Sans", sans-serif;
+}
+
 body{
     color: #cbd1c7;
     background-color: #171717;
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: var(--font-text);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -399,7 +403,7 @@ a:hover{
     background: black;
     border: 1px solid;
     margin-left: auto;
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: var(--font-text);
     transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 .container .contact .form-mail .btn-input:hover{
