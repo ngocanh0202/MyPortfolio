@@ -6,8 +6,13 @@ form.addEventListener('submit', (event) => {
     const _subject = form.querySelector('input[name="subject"]').value;
     const _email = form.querySelector('input[name="email"]').value;
     const _message = form.querySelector('textarea[name="message"]').value;
-    if(_subject === '' || _email === '' || _message === ''){
+    if(_subject.trim() === '' || _email.trim() === '' || _message.trim() === ''){
         alert('Please fill all the fields');
+        return;
+    }
+
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(_email)){
+        alert('Invalid email');
         return;
     }
 
