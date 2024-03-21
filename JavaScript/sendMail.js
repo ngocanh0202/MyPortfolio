@@ -17,9 +17,9 @@ form.addEventListener('submit', (event) => {
     }
 
     emailjs.send("service_pm7ie9l","template_dt3v0kj",{
-        message: _message,
-        subject: _subject,
-        email: _email,
+        message: _message.trim(),
+        subject: _subject.trim(),
+        email: _email.trim(),
     }).then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert('Email sent successfully');
