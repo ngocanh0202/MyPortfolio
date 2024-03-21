@@ -1,5 +1,9 @@
 import datas from "./data.js";
-import handleImageChange from "./displayImage.js";
+import handleImageChange from "./HandledisplayImageProject.js";
+
+
+
+
 
 function projectContents(){
     const project_container = document.querySelector(".project-contents");

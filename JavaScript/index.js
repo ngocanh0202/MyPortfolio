@@ -1,6 +1,6 @@
-import {projectContents,detailProject,removeProjectClicked} from './data_projects.js';
-import adjustSelectorwindowSize from './button_media.js';
-import {button_events, display_home} from './buttons.js';
+import {projectContents,detailProject,removeProjectClicked} from './HandleDisplayProjects.js';
+import Handlesizewindow from './Handlesizewindow.js';
+import {button_events, display_home} from './HandlebuttonsContents.js';
 import musicController from './musicController.js';
 import copyToClipboard from './copy_to_clipboard.js';
 
@@ -10,13 +10,19 @@ const selector = document.querySelector(".selector ul .selected");
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    //HandlebuttonsContents
     button_events();
     display_home(home);
+    // Set null click event for selector
     selector.style.pointerEvents = "none";
+    // HandleDisplayProjects
     projectContents();
     detailProject();
     removeProjectClicked();
-    adjustSelectorwindowSize();
+    // Handlesizewindow
+    Handlesizewindow();
+    // Play music
     musicController();
+    // Copy to clipboard
     copyToClipboard();
 });

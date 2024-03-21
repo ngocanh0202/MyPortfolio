@@ -1,6 +1,6 @@
 const contents = document.querySelectorAll(".container > div");
 const buttons = document.querySelectorAll(".selector > ul li");
-import { displaySingleWords, tasks } from "./displaySingleWords.js";
+import { displaySingleWords, tasks } from "./HandleTitle.js";
 
 
 const data_single_words = {
