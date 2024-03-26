@@ -1,4 +1,4 @@
-import {projectContents,detailProject,removeProjectClicked} from './HandleDisplayProjects.js';
+import {HandleDisplayProject,removeProjectClicked} from './HandleDisplayProjects.js';
 import Handlesizewindow from './Handlesizewindow.js';
 import {button_events, display_home} from './HandlebuttonsContents.js';
 import musicController from './musicController.js';
@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set null click event for selector
     selector.style.pointerEvents = "none";
     // HandleDisplayProjects
-    projectContents();
-    detailProject();
+    HandleDisplayProject();
     removeProjectClicked();
     // Handlesizewindow
     Handlesizewindow();

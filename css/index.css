@@ -159,6 +159,7 @@ a:hover{
     justify-content: center;
     align-items: flex-end;
     gap: 21px;
+    width: 100px;
 }
 .selector ul li{
     cursor: pointer;
@@ -241,28 +242,30 @@ a:hover{
 /* project */
 .container .projects .project-contents{
     width: auto;
-    height: 150px;
+    height: 200px;
     background-color: #D9D9D9;
 
     display: inline-flex;
-    flex-wrap: wrap ;
-    justify-content: space-evenly;
-    gap: 41px;
+    justify-content: center;
+    align-items: center;
+    gap:80px;
 
     padding: 20px;
-    overflow-x: auto;
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
     border-radius: 20px;
+
+    position: relative;
 }
 
-.container .projects .project-contents::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari and Opera */
+.project-sub{
+    width: 221px;
+    height: 150px;
 }
-.container .projects .project-contents .project{
+.project-main{
+    width: 220px;
+    height: 174px;
+}
+.project{
     position: relative;
-    width: 327px;
-    height: 181px;
     border-radius: 10px;
     cursor: pointer;
     border-top: 20px solid black;
@@ -271,6 +274,27 @@ a:hover{
     border-right: 5px solid black;
     box-sizing: border-box;
 }
+
+.project-animation-clean{
+    animation: clean 0.5s ease-out backwards;
+}
+.image-project-clean-left{
+    animation: move-to-left 0.5s ease-out backwards;
+}
+/* clean by opacity */
+@keyframes clean{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    
+    }
+}
+
 .container .projects .project-contents .project img{
     object-fit: contain;
 }
@@ -278,7 +302,7 @@ a:hover{
     position: absolute;
     bottom: -20px;
     left: 0px;
-    color: #cbd1c7;
+    color: #a6ada1;
     font-size: 17px;
 }
 .project-clicked{
@@ -298,6 +322,26 @@ a:hover{
     z-index: 9999;
 }
 
+.button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #241f1f;
+}
+
+.next{
+    right: 7px;
+}
+.next:active{
+    background: #4f4c3d;
+}
+.prev{
+    left: 7px;
+}
+.prev:active{
+    background: #4f4c3d;
+}
 @keyframes right-to-left{
     from{
         transform: translateX(100%);
@@ -502,6 +546,16 @@ a:hover{
         display: block;
         z-index: 999;
         cursor: pointer;
+    }
+    .container .projects .project-contents #project-prev{
+        width: 70%;
+    }
+    .container .projects .project-contents .project-main{
+        display: none;
+    
+    }    
+    .container .projects .project-contents #project-next{
+        display: none;
     }
 }
 @media screen and (max-width: 400px) and (orientation: landscape), screen and (max-width: 279px){

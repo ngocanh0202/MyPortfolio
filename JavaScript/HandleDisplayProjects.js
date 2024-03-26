@@ -1,71 +1,37 @@
 import datas from "./data.js";
-import handleImageChange from "./HandledisplayImageProject.js";
+import ModelProjectObject from "./ModelProjectObject.js";
+import HanldedetailProject from "./HandleDetailProject.js";
+
+var modelProjectObject = new ModelProjectObject(0, 2, datas.length-1);
 
 
-
-
-
-function projectContents(){
-    const project_container = document.querySelector(".project-contents");
-    var project_Headers = "";
+function HandleDisplayProject(){
+    const project_container = document.querySelectorAll(".project-contents .project");
+    var project_Headers_array = [];
     datas.forEach((data, index) => {
-        project_Headers += `
-            <div class="project" id="${index}">
-                <img src="${data.image[0]}" width="100%" height="100%" alt="${data.title}">
-                <div class="project-title text-main">${data.title}</div>
-            </div>
+        let project_item = `
+            <img src="${data.image[0]}" width="100%" height="100%" alt="${data.title}">
+            <div class="project-title text-main">${data.title}</div>
         `
+        project_Headers_array.push(project_item);
     });
-    project_container.innerHTML = project_Headers;
+    for(let i = 0; i <= modelProjectObject.last_index; i++){
+        project_container[i].innerHTML = project_Headers_array[i];
+    }
+    
+    HanldedetailProject(modelProjectObject.last_index);
+    handleSwitchProject();
+
 }
 
 
-function detailProject(){
-    const projects = document.querySelectorAll(".project");
-    projects.forEach((project, index) => {
-        project.addEventListener("click", (event) => {
-    
-            let li_descriptions = "";
-            datas[index].description.forEach((description) => {
-                if(description.startsWith("GitHub: ")){
-                    li_descriptions += `<li><a href="${description.slice(8)}" target="_blank">GitHub</a></li>`;
-                }
-                else if(description.startsWith("Unity play: ")){
-                    li_descriptions += `<li><a href="${description.slice(11)}" target="_blank">Unity play</a></li>`;
-                }
-                else{
-                    li_descriptions += `<li>${description}</li>`;
-                }
-                
-                
-            });
-            let images = "";
-            datas[index].image.forEach((image) => {
-                images += `
-                    <div class="project-image">
-                        <img src="${image}" width="100%" height="100%" alt="${datas[index].title}">
-                    </div>
-                `;
-            });
-    
-            const projectClicked = document.createElement('div');
-            projectClicked.classList.add('project-clicked');
-            projectClicked.innerHTML = `
-                <div class="project-title text-project">${datas[index].title}</div>
-                <div class="project-timeline text-project-sub">${datas[index]["time-line"]}</div>
-                <div class="project-description text-project-sub">
-                    <ul>
-                        ${li_descriptions}
-                    </ul>
-                </div>
-                <div class="project-images">
-                    ${images}
-                </div>
-            `;
-            document.body.appendChild(projectClicked);
-            handleImageChange();
-        });
-    });
+
+function handleSwitchProject(){
+    const next = document.querySelector(".project-contents .next");
+    const prev = document.querySelector(".project-contents .prev");
+
+    next.addEventListener("click", modelProjectObject.handleButtonNext);
+    prev.addEventListener("click", modelProjectObject.handleButtonPrev);
 }
 
 function removeProjectClicked(){
@@ -84,4 +50,4 @@ function removeProjectClicked(){
 
 
 
-export {projectContents,detailProject,removeProjectClicked};
+export {HandleDisplayProject,removeProjectClicked,modelProjectObject};
