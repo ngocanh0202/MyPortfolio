@@ -8,15 +8,24 @@ const adjustSelector = () => {
     if (window.innerWidth <= 1040) {
         selector.classList.remove("selector-display");
         selector.classList.add("selector-hidden");
-        modelProjectObject.last_index = 0;
-        modelProjectObject.head_index = 0;
-        modelProjectObject.resetProject(0,0);
+        let main_index = (modelProjectObject.head_index + modelProjectObject.last_index) / 2; 
+        modelProjectObject.last_index = main_index;
+        modelProjectObject.head_index = main_index;
+        modelProjectObject.resetProject(main_index,main_index);
     } else {
         selector.classList.remove("selector-hidden");
         selector.classList.add("selector-display");
-        modelProjectObject.head_index = 0;
-        modelProjectObject.last_index = 2;
-        modelProjectObject.resetProject(0,2);
+        let current_index_head = 0
+        if(modelProjectObject.head_index >=  data.length - 2){
+            current_index_head = modelProjectObject.head_index - 2;
+        }
+        else{
+            current_index_head = modelProjectObject.head_index;
+        }
+        let current_index_last = current_index_head + 2;
+        modelProjectObject.head_index = current_index_head;
+        modelProjectObject.last_index = current_index_last;
+        modelProjectObject.resetProject(current_index_head,current_index_last);
     }
 };
 
