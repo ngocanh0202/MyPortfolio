@@ -73,19 +73,21 @@ const projects = [
         ]
     },
     {
-        "title": "Ball",
-        "time-line": "Dec 1, 2023 - Dec 28, 2023",
+        "title": "Jump Game",
+        "time-line": "Mar 28, 2024 - Apr 4, 2024",
         "description": [
-            "It is the window game, balls fall on the top screen and player use arrow key or WASD keys to move the box to catch the ball make score raise to 100.",
+            "The game has an endless round, the player jumps up the steps to calculate points. During the scoring process, different elemental particles will be shot out. If the player hits 2 different elemental particles and react with each other, then phenomena will arise.",
             "Team size: 1",
-            "Tools: GitHub, Unity.",
-            "Technology: C#",
-            "GitHub: https://github.com/ngocanh0202/Ball.git",
-            "Unity play: https://play.unity.com/mg/other/webgl-builds-384095"
+            "Tools: Visual studio code.",
+            "Technology: Unity, C#",
+            "GitHub: https://github.com/ngocanh0202/JumpGame",
+            "Unity play: https://play.unity.com/mg/other/jumpgame-10"
         ],
         "image" : [
-            "images/BALL/1.png",
-            "images/BALL/2.png",
+            "images/JG/1.png",
+            "images/JG/2.png",
+            "images/JG/3.png",
+            "images/JG/4.png",
         ]
     },
     {
