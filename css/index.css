@@ -3,6 +3,7 @@
 }
 
 body{
+    overflow: hidden;
     color: #cbd1c7;
     background-color: #171717;
     font-family: var(--font-text);
